@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@theme {
+    --color-primary-base: #11667b;
+    --color-primary-hover: #0e5668;
+    --color-primary-pressed: #0b4856;
+    --color-primary-light: #d9e9ee;
+    --color-primary-extra-light: #eaf3f6;
+    --color-primary-border: #9ac4cf;
+    --color-primary-disabled: #d9e7eb;
+    --color-primary-text: #ffffff;
+    --color-primary-text-disabled: #86a7b0;
+    --color-primary-focus: #9ac4cf;
+
+    --color-secondary-base: #f59f1f;
+    --color-secondary-hover: #e18d10;
+    --color-secondary-pressed: #c67c0d;
+    --color-secondary-light: #fde7c3;
+    --color-secondary-extra-light: #fff4e1;
+    --color-secondary-border: #f7c978;
+    --color-secondary-disabled: #fbe9c8;
+    --color-secondary-text: #111111;
+    --color-secondary-text-disabled: #b7975f;
+    --color-secondary-focus: #f9c96d;
+
+    --color-soft-teal-base: #9ac4cf;
+    --color-soft-teal-light: #cde1e8;
+    --color-soft-teal-extra-light: #eaf3f6;
+    --color-soft-teal-border: #bfd9e1;
+    --color-soft-teal-text: #11667b;
+
+    --color-neutral-900: #111111;
+    --color-neutral-800: #222222;
+    --color-neutral-700: #333333;
+    --color-neutral-600: #4b4b4b;
+    --color-neutral-500: #6f6f6f;
+    --color-neutral-400: #9a9a9a;
+    --color-neutral-300: #d5d5d5;
+    --color-neutral-200: #e6e6e6;
+    --color-neutral-100: #f3f3f3;
+    --color-neutral-50: #f8f8f8;
+    --color-neutral-0: #ffffff;
+
+    --color-success-base: #1b8a5a;
+    --color-success-hover: #157a4a;
+    --color-success-background: #e7f4ee;
+    --color-success-text: #157a4a;
+    --color-success-border: #a8d8bf;
+
+    --color-warning-base: #f59f1f;
+    --color-warning-hover: #e18d10;
+    --color-warning-pressed: #c67c0d;
+    --color-warning-background: #fff4e1;
+    --color-warning-text: #8a5300;
+    --color-warning-border: #f7c978;
+
+    --color-danger-base: #c94444;
+    --color-danger-hover: #b23a3a;
+    --color-danger-background: #fbeaea;
+    --color-danger-text: #b23a3a;
+    --color-danger-border: #e3afaf;
+
+    --color-info-base: #11667b;
+    --color-info-background: #eaf3f6;
+    --color-info-text: #11667b;
+    --color-info-border: #9ac4cf;
+}

@@ -1,0 +1,365 @@
+D:\Download\persuratan-ft-main
++-- app
+|   +-- Enums
+|   |   \-- StatusPengajuan.php
+|   +-- Http
+|   |   +-- Controllers
+|   |   |   +-- Auth
+|   |   |   |   +-- ActivationController.php
+|   |   |   |   +-- AuthenticatedSessionController.php
+|   |   |   |   +-- ConfirmablePasswordController.php
+|   |   |   |   +-- EmailVerificationNotificationController.php
+|   |   |   |   +-- EmailVerificationPromptController.php
+|   |   |   |   +-- NewPasswordController.php
+|   |   |   |   +-- OtpVerificationController.php
+|   |   |   |   +-- PasswordController.php
+|   |   |   |   +-- PasswordResetLinkController.php
+|   |   |   |   +-- RegisteredUserController.php
+|   |   |   |   \-- VerifyEmailController.php
+|   |   |   +-- Controller.php
+|   |   |   +-- DashboardController.php
+|   |   |   +-- JenisSuratController.php
+|   |   |   +-- LaporanController.php
+|   |   |   +-- NomorSuratController.php
+|   |   |   +-- NotificationController.php
+|   |   |   +-- PengajuanSuratController.php
+|   |   |   +-- ProfileController.php
+|   |   |   +-- SignatureController.php
+|   |   |   +-- TandaTanganController.php
+|   |   |   +-- UserController.php
+|   |   |   +-- VerifikasiController.php
+|   |   |   \-- VerifikasiPublikController.php
+|   |   +-- Middleware
+|   |   |   +-- EnsureEmailVerified.php
+|   |   |   \-- SecurityHeaders.php
+|   |   \-- Requests
+|   |       +-- Auth
+|   |       |   \-- LoginRequest.php
+|   |       +-- ProfileUpdateRequest.php
+|   |       +-- StoreJenisSuratRequest.php
+|   |       +-- StorePengajuanRequest.php
+|   |       +-- StoreUserRequest.php
+|   |       +-- UpdateJenisSuratRequest.php
+|   |       +-- UpdatePengajuanRequest.php
+|   |       +-- UpdateUserRequest.php
+|   |       \-- UploadTemplateRequest.php
+|   +-- Mail
+|   |   \-- OtpMail.php
+|   +-- Models
+|   |   +-- EmailOtp.php
+|   |   +-- JenisSurat.php
+|   |   +-- Lampiran.php
+|   |   +-- LogAktivitas.php
+|   |   +-- NomorSuratCounter.php
+|   |   +-- PengajuanSurat.php
+|   |   \-- User.php
+|   +-- Notifications
+|   |   \-- PengajuanStatusChanged.php
+|   +-- Observers
+|   |   \-- PengajuanSuratObserver.php
+|   +-- Policies
+|   |   \-- PengajuanSuratPolicy.php
+|   +-- Providers
+|   |   \-- AppServiceProvider.php
+|   +-- Services
+|   |   +-- LaporanService.php
+|   |   +-- NomorSuratService.php
+|   |   +-- OtpService.php
+|   |   +-- SuratPdfService.php
+|   |   \-- TemplateSuratService.php
+|   \-- View
+|       \-- Components
+|           +-- AppLayout.php
+|           \-- GuestLayout.php
++-- bootstrap
+|   +-- cache
+|   |   +-- .gitignore
+|   |   +-- packages.php
+|   |   \-- services.php
+|   +-- app.php
+|   \-- providers.php
++-- config
+|   +-- app.php
+|   +-- auth.php
+|   +-- cache.php
+|   +-- database.php
+|   +-- dompdf.php
+|   +-- filesystems.php
+|   +-- logging.php
+|   +-- mail.php
+|   +-- permission.php
+|   +-- queue.php
+|   +-- services.php
+|   +-- session.php
+|   \-- surat.php
++-- database
+|   +-- factories
+|   |   \-- UserFactory.php
+|   +-- migrations
+|   |   +-- 0001_01_01_000000_create_users_table.php
+|   |   +-- 0001_01_01_000001_create_cache_table.php
+|   |   +-- 0001_01_01_000002_create_jobs_table.php
+|   |   +-- 2026_09_15_134913_create_permission_tables.php
+|   |   +-- 2026_09_15_134933_create_activity_log_table.php
+|   |   +-- 2026_09_15_134934_add_event_column_to_activity_log_table.php
+|   |   +-- 2026_09_15_134935_add_batch_uuid_column_to_activity_log_table.php
+|   |   +-- 2026_09_18_092147_add_extra_fields_to_users_table.php
+|   |   +-- 2026_09_18_092148_create_jenis_surat_table.php
+|   |   +-- 2026_09_18_092148_create_pengajuan_surat_table.php
+|   |   +-- 2026_09_18_092149_create_log_aktivitas_table.php
+|   |   +-- 2026_09_18_092149_create_nomor_surat_counter_table.php
+|   |   +-- 2026_09_18_092150_create_lampiran_table.php
+|   |   +-- 2026_09_19_081835_add_created_at_index_to_pengajuan_surat_table.php
+|   |   +-- 2026_09_19_082358_create_notifications_table.php
+|   |   +-- 2026_09_23_040325_add_target_signer_id_to_pengajuan_surat_table.php
+|   |   +-- 2026_10_06_031355_add_mode_ttd_to_pengajuan_surat_table.php
+|   |   +-- 2026_10_06_134043_add_nim_and_nullable_password_to_users_table.php
+|   |   \-- 2026_10_06_134043_create_email_otps_table.php
+|   +-- seeders
+|   |   +-- DatabaseSeeder.php
+|   |   +-- DummyUserSeeder.php
+|   |   +-- JenisSuratSeeder.php
+|   |   \-- RoleSeeder.php
+|   \-- .gitignore
++-- public
+|   +-- images
+|   |   +-- logo-footer.png
+|   |   +-- logo-header.png
+|   |   +-- logo-header-removebg-preview.png
+|   |   \-- tsu.jpg
+|   +-- storage
+|   |   \-- .gitignore
+|   +-- .htaccess
+|   +-- favicon.ico
+|   +-- hot
+|   +-- index.php
+|   \-- robots.txt
++-- resources
+|   +-- css
+|   |   \-- app.css
+|   +-- js
+|   |   +-- app.js
+|   |   \-- bootstrap.js
+|   +-- views
+|   |   +-- auth
+|   |   |   +-- activation.blade.php
+|   |   |   +-- confirm-password.blade.php
+|   |   |   +-- forgot-password.blade.php
+|   |   |   +-- login.blade.php
+|   |   |   +-- register.blade.php
+|   |   |   +-- reset-password.blade.php
+|   |   |   +-- verify-email.blade.php
+|   |   |   \-- verify-otp.blade.php
+|   |   +-- baak
+|   |   |   \-- index.blade.php
+|   |   +-- components
+|   |   |   +-- application-logo.blade.php
+|   |   |   +-- auth-session-status.blade.php
+|   |   |   +-- danger-button.blade.php
+|   |   |   +-- dropdown.blade.php
+|   |   |   +-- dropdown-link.blade.php
+|   |   |   +-- input-error.blade.php
+|   |   |   +-- input-label.blade.php
+|   |   |   +-- modal.blade.php
+|   |   |   +-- nav-link.blade.php
+|   |   |   +-- primary-button.blade.php
+|   |   |   +-- responsive-nav-link.blade.php
+|   |   |   +-- secondary-button.blade.php
+|   |   |   \-- text-input.blade.php
+|   |   +-- emails
+|   |   |   \-- otp.blade.php
+|   |   +-- jenis-surat
+|   |   |   +-- _form.blade.php
+|   |   |   +-- create.blade.php
+|   |   |   +-- edit.blade.php
+|   |   |   +-- index.blade.php
+|   |   |   +-- template.blade.php
+|   |   |   \-- template-editor.blade.php
+|   |   +-- laporan
+|   |   |   +-- export-pdf.blade.php
+|   |   |   \-- index.blade.php
+|   |   +-- layouts
+|   |   |   +-- admin.blade.php
+|   |   |   +-- app.blade.php
+|   |   |   +-- guest.blade.php
+|   |   |   \-- navigation.blade.php
+|   |   +-- notifications
+|   |   |   \-- index.blade.php
+|   |   +-- partials
+|   |   |   +-- flash.blade.php
+|   |   |   \-- status-badge.blade.php
+|   |   +-- pengajuan
+|   |   |   +-- create.blade.php
+|   |   |   +-- edit.blade.php
+|   |   |   +-- index.blade.php
+|   |   |   \-- show.blade.php
+|   |   +-- profile
+|   |   |   +-- partials
+|   |   |   |   +-- delete-user-form.blade.php
+|   |   |   |   +-- update-password-form.blade.php
+|   |   |   |   \-- update-profile-information-form.blade.php
+|   |   |   \-- edit.blade.php
+|   |   +-- signature
+|   |   |   \-- create.blade.php
+|   |   +-- surat
+|   |   |   +-- default-template.blade.php
+|   |   |   \-- pdf-layout.blade.php
+|   |   +-- ttd
+|   |   |   +-- index.blade.php
+|   |   |   \-- sign-form.blade.php
+|   |   +-- users
+|   |   |   +-- _form.blade.php
+|   |   |   +-- create.blade.php
+|   |   |   +-- edit.blade.php
+|   |   |   \-- index.blade.php
+|   |   +-- verifikasi
+|   |   |   \-- show.blade.php
+|   |   +-- dashboard.blade.php
+|   |   \-- welcome.blade.php
+|   \-- views-backup
+|       +-- auth
+|       |   +-- confirm-password.blade.php
+|       |   +-- forgot-password.blade.php
+|       |   +-- login.blade.php
+|       |   +-- register.blade.php
+|       |   +-- reset-password.blade.php
+|       |   \-- verify-email.blade.php
+|       +-- baak
+|       |   \-- index.blade.php
+|       +-- components
+|       |   +-- application-logo.blade.php
+|       |   +-- auth-session-status.blade.php
+|       |   +-- danger-button.blade.php
+|       |   +-- dropdown.blade.php
+|       |   +-- dropdown-link.blade.php
+|       |   +-- input-error.blade.php
+|       |   +-- input-label.blade.php
+|       |   +-- modal.blade.php
+|       |   +-- nav-link.blade.php
+|       |   +-- primary-button.blade.php
+|       |   +-- responsive-nav-link.blade.php
+|       |   +-- secondary-button.blade.php
+|       |   \-- text-input.blade.php
+|       +-- jenis-surat
+|       |   +-- _form.blade.php
+|       |   +-- create.blade.php
+|       |   +-- edit.blade.php
+|       |   +-- index.blade.php
+|       |   +-- template.blade.php
+|       |   \-- template-editor.blade.php
+|       +-- laporan
+|       |   +-- export-pdf.blade.php
+|       |   \-- index.blade.php
+|       +-- layouts
+|       |   +-- admin.blade.php
+|       |   +-- app.blade.php
+|       |   +-- guest.blade.php
+|       |   \-- navigation.blade.php
+|       +-- notifications
+|       |   \-- index.blade.php
+|       +-- partials
+|       |   +-- flash.blade.php
+|       |   \-- status-badge.blade.php
+|       +-- pengajuan
+|       |   +-- create.blade.php
+|       |   +-- index.blade.php
+|       |   \-- show.blade.php
+|       +-- profile
+|       |   +-- partials
+|       |   |   +-- delete-user-form.blade.php
+|       |   |   +-- update-password-form.blade.php
+|       |   |   \-- update-profile-information-form.blade.php
+|       |   \-- edit.blade.php
+|       +-- signature
+|       |   \-- create.blade.php
+|       +-- surat
+|       |   +-- default-template.blade.php
+|       |   \-- pdf-layout.blade.php
+|       +-- ttd
+|       |   \-- index.blade.php
+|       +-- users
+|       |   +-- _form.blade.php
+|       |   +-- create.blade.php
+|       |   +-- edit.blade.php
+|       |   \-- index.blade.php
+|       +-- verifikasi
+|       |   \-- show.blade.php
+|       +-- dashboard.blade.php
+|       \-- welcome.blade.php
++-- routes
+|   +-- auth.php
+|   +-- console.php
+|   \-- web.php
++-- storage
+|   +-- app
+|   |   +-- public
+|   |   |   \-- .gitignore
+|   |   \-- .gitignore
+|   +-- framework
+|   |   +-- cache
+|   |   |   +-- data
+|   |   |   |   \-- .gitignore
+|   |   |   \-- .gitignore
+|   |   +-- sessions
+|   |   |   \-- .gitignore
+|   |   +-- testing
+|   |   |   \-- .gitignore
+|   |   +-- views
+|   |   |   +-- .gitignore
+|   |   |   +-- 03f70349b10026788d7d3b21e92c47af.php
+|   |   |   +-- 0567a155fe678fc2e75d8e034de84034.php
+|   |   |   +-- 103a7a41a074361d4352f445b707490b.php
+|   |   |   +-- 22642533763ab7810e159bedddbd532a.php
+|   |   |   +-- 2a016f7640bef925e4d52c9c69be9f63.php
+|   |   |   +-- 2b66d1f7e05dff213cc7891fb3de9fc4.php
+|   |   |   +-- 340fe424a7b3e918c73237d3ccde83aa.php
+|   |   |   +-- 34eef14a2ab4350e22205f7724aed3b5.php
+|   |   |   +-- 39a4b22ca72f887de149ca83189f0c49.php
+|   |   |   +-- 3fb7367a5a6e4abb7a9cdf60ddddec9e.php
+|   |   |   +-- 7f65207b15908b101c56ce6bacc912e0.php
+|   |   |   +-- 990fbaaca4d56dad85ec12a5565e2d81.php
+|   |   |   +-- 9fb70a47f86329c0767fb0535e1a74f7.php
+|   |   |   +-- b0d92fb415ce1806d275239714d264d7.php
+|   |   |   +-- bb6a9387e097ae560072ae0edce96237.php
+|   |   |   +-- be5ac0e7389477b1fe3873f94b4f5991.php
+|   |   |   +-- d89fed0429d674ee71ed3d91e5323206.php
+|   |   |   +-- de182262071ecebbd327a0da72741235.php
+|   |   |   +-- e0a9407e29c35505e0197bc8fc550976.php
+|   |   |   +-- e3b6a157066310ff00d71913fed27451.php
+|   |   |   +-- f558cbf7879f012d97e2e366d4c26cd2.php
+|   |   |   +-- f74a14bb02a7db09a6871a21d1ab008b.php
+|   |   |   +-- f94cb84fcb0d46cb9eebb1e585005bf3.php
+|   |   |   +-- f99cc828639625f20c3159be5a0b8d9c.php
+|   |   |   \-- fcfa92235c8a22c780caedf8376d1978.php
+|   |   \-- .gitignore
+|   \-- logs
+|       +-- .gitignore
+|       \-- laravel.log
++-- tests
+|   +-- Feature
+|   |   +-- Auth
+|   |   |   +-- AuthenticationTest.php
+|   |   |   +-- EmailVerificationTest.php
+|   |   |   +-- PasswordConfirmationTest.php
+|   |   |   +-- PasswordResetTest.php
+|   |   |   +-- PasswordUpdateTest.php
+|   |   |   \-- RegistrationTest.php
+|   |   +-- ExampleTest.php
+|   |   \-- ProfileTest.php
+|   +-- Unit
+|   |   \-- ExampleTest.php
+|   \-- TestCase.php
++-- .editorconfig
++-- .env.example
++-- .gitattributes
++-- .gitignore
++-- artisan
++-- composer.json
++-- composer.lock
++-- package.json
++-- package-lock.json
++-- phpunit.xml
++-- postcss.config.js
++-- README.md
++-- tailwind.config.js
+\-- vite.config.js
